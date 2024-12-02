@@ -3,33 +3,41 @@ import Button from "./Button";
 
 const Newsletter = () => {
   return (
-    <div className="w-full py-16 text-white px-4">
-      <div className="max-w-[1240px] mx-auto md:px-4 grid lg:grid-cols-3">
-        <div className="lg:col-span-2">
-          <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2">
-            Want tips & tricks to optimize your flow?
-          </h1>
-          <p>Sign up to our newsletter and stay up to date.</p>
+    <div className="bg-gray-900 w-full py-20 text-white">
+      <div className="max-w-[1240px] mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">
+            Stay Ahead of the Curve
+          </h2>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            Join our newsletter for exclusive tips, industry insights, and optimization strategies delivered straight to your inbox.
+          </p>
         </div>
-        <div className="my-4 lg:ml-2">
-          <div className="flex md:flex-col flex-row justify-center items-center md:items-start">
+
+        <div className="max-w-xl mx-auto">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <input
-              className="p-2 w-full flex rounded-md text-black md:mr-0 mr-4"
+              className="flex-1 px-6 py-3 h-[44px] rounded-lg text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[#00df9a]"
               type="email"
-              placeholder="Enter Email"
+              placeholder="your@email.com"
             />
             <Button
-              text={"Notify Me"}
-              bgColor={"#00df9a"}
-              textColor={"black"}
+              text="Subscribe Now"
+              bgColor="#00df9a"
+              textColor="black"
+              className="whitespace-nowrap"
             />
           </div>
-          <p>
-            We care about the protection of your data. Read Our{" "}
-            <a href="/" className="text-[#00df9a]">
+
+          <p className="text-sm text-gray-400 text-center mt-4">
+            By subscribing, you agree to our{" "}
+            <a href="/privacy" className="text-[#00df9a] hover:underline">
               Privacy Policy
+            </a>{" "}
+            and{" "}
+            <a href="/terms" className="text-[#00df9a] hover:underline">
+              Terms of Service
             </a>
-            .
           </p>
         </div>
       </div>
